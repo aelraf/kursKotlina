@@ -47,11 +47,50 @@ fun main(){
     println("Operatory porównania: ==, !=, >, <, >=, <=")
     println("Operatory logiczne: &&, ||, !")
 
+    var y : Int
     if (x == xLong.toInt()){
         println("Sa rowne!")
-
+        y = x + 1
     } else {
         println("Nie sa rowne!")
+        y = x - 1
     }
+
+    val time = 20
+    val greeting = if (time < 18) "Good day" else "Good evening"
+    println(greeting)
+
+    /* wyrazenie when - analogiczne do switch w javie */
+    val day = 4
+
+    val result = when(day){
+        1 -> "Monday"
+        2 -> "Tuesday"
+        3 -> "Wednesday"
+        4 -> "Thursday"
+        5 -> "Friday"
+        6 -> "Saturday"
+        7 -> "Sunday"
+        else -> "Invalid day."
+    }
+    println(result)
+
+    // petla while(condition){ code block }
+    var i = 0
+    while (i < 5){
+        println(i)
+        i++
+    }
+
+    // petla do{ code block } while( condition )
+    do{
+        println(i)
+        i--
+    }
+    while( i > 0)
+
+
+
+
 
 }
