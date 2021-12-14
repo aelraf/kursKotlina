@@ -1,3 +1,22 @@
+fun myFunction(){
+    println("myFunction()")
+}
+
+
+fun myFun2(fname: String){
+    println("$fname myFun2")
+}
+
+
+fun myFun3(x: Int) : Int{
+    return x * x
+}
+
+
+// skrocona wersja return
+fun myFun4(x: Int, y: Int) = x + y
+
+
 //fun main(args : Array<String>){
 fun main(){
     println("Hello world - main")
@@ -89,8 +108,34 @@ fun main(){
     }
     while( i > 0)
 
+    println("Wyrazenie 'break' wyskakuje poza petle, a wyrazenie 'continue' przerywa pojedyncza iteracje")
 
+    val cars = arrayOf("Volvo", "BMW", "Ford", "Mazda")
+    println(cars[0])
+    cars[0] = "Opel"
+    println(cars.size)
+    if ("Volvo" in cars){
+        println("mamy volvo")
+    } else {
+        println("Nie mamy volva.")
+    }
+    println("Petla po tablicy: ")
+    for (xy in cars){
+        println(xy)
+    }
 
+    println("W kotlinie petla for() jest uzywana do iterowania po tablicach, zakresach i pozostalych iteratorach.")
 
+    for (chars in 'a'..'x'){
+        println(chars)
+    }
+    for (nums in 5..15){
+        println(nums)
+    }
+
+    myFunction()
+    myFun2("Kat")
+
+    print(myFun3(15))
 
 }
