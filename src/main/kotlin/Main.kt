@@ -17,6 +17,18 @@ class Auto(var brand: String, var model: String, var year: Int){
 }
 
 
+open class MyParentClass {
+    val x = 5
+}
+
+
+class MyChildClass: MyParentClass(){
+    fun myFunction(){
+        println(x)
+    }
+}
+
+
 fun main(args: Array<String>) {
     println("Hello World!")
 
@@ -38,6 +50,10 @@ fun main(args: Array<String>) {
 
     a1.drive()
     a1.speed(200)
+
+    println("\n dziedziczenie: \n")
+    val myObj = MyChildClass()
+    myObj.myFunction()
 
 }
 
